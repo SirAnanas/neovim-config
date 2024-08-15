@@ -23,3 +23,4 @@ vim.keymap.set({"n", "v"}, "<C-l>", "<cmd> :wincmd l <cr>")
 vim.keymap.set({"n", "v"}, "<C-Right>", "<cmd> :wincmd > <cr>")
 vim.keymap.set({"n", "v"}, "<C-Left>", "<cmd> :wincmd < <cr>")
 
+vim.keymap.set("n", "<leader>gr", "<cmd> :GrugFar <cr>")
