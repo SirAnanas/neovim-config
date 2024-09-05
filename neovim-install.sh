@@ -7,6 +7,6 @@ apt-get update
 apt-get -y install neovim
 mkdir -p /home/zsrckp/.config/nvim
 cd /home/zsrckp/.config/nvim
-git clone https://SirAnanas/neovim-config/
+git clone https://github.com/SirAnanas/neovim-config/
 mv neovim-config/* .
 rm -rf neovim-config
