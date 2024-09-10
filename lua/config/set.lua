@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 
 vim.o.termguicolors = true
+vim.diagnostic.config({
+    virtual_text = false,
+})
 
 vim.o.tabstop = 4
 vim.o.expandtab = true
