@@ -6,4 +6,4 @@ sudo add-apt-repository -y ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get -y install neovim
 mkdir -p ~/.config/nvim
-mv * ~/.config/nvim
+cp * ~/.config/nvim
