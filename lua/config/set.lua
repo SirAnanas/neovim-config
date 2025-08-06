@@ -1,6 +1,5 @@
 vim.g.mapleader = " "
 
-vim.o.termguicolors = true
 vim.diagnostic.config({
     virtual_text = false,
 })

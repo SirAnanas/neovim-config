@@ -9,8 +9,7 @@ return {
         'williamboman/mason.nvim',
         lazy = false,
         config = true,
-    },
-
+    },    
     -- Autocompletion
     {
         'hrsh7th/nvim-cmp',
@@ -36,10 +35,10 @@ return {
                     end
                 end,
                 sources = {
-                    {name = 'nvim_lsp'},
-                    {name = 'luasnip'},
-                    {name = 'buffer'},
-                    {name = 'treesitter'},
+                    {name = 'nvim_lsp', max_item_count = 5},
+                    {name = 'luasnip', max_item_count = 5},
+                    {name = 'buffer', max_item_count = 5},
+                    {name = 'treesitter', max_item_count = 5},
                 },
                 mapping = cmp.mapping({
                     ['<Enter>'] = cmp.mapping.confirm({select = true}),
@@ -52,6 +51,10 @@ return {
                     expand = function(args)
                         vim.snippet.expand(args.body)
                     end,
+                },
+                window = {
+                    completion = cmp.config.window.bordered(),
+                    documentation = cmp.config.window.bordered(),
                 },
             })
         end
