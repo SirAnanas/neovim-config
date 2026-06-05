@@ -1,16 +1,23 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", "<cmd> :NvimTreeToggle <cr>")
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { silent = true})
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { silent = true})
 
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- vim.keymap.set({"n", "v"}, "<leader>ca", function()
---     require('fzf-lua').lsp_code_actions()
+vim.keymap.set({"n", "v"}, "<leader>ca", function()
+    require('fzf-lua').lsp_code_actions()
+end)
+vim.keymap.set('n', '<leader>cf', vim.lsp.buf.format)
+vim.keymap.set('n', '<leader>cd', vim.diagnostic.open_float)
+-- vim.keymap.set('n', '<leader>s', "<cmd> :LspStop <CR>")
+-- vim.keymap.set('n', '<leader>p', function()
+--     local user_input = vim.fn.input("Which LSP to start?: ")
+--     vim.cmd(":LspStart " .. user_input)
 -- end)
 
 vim.keymap.set({"n", "i", "v", "t"}, "<C-`>", "<cmd> ToggleTerm direction=float <cr>")
